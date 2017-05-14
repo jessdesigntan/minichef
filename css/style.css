@@ -1,0 +1,157 @@
+/*
+  1. font styles
+  2. global styles
+  3. navbar custom
+
+
+*/
+
+/*=============================
+    1. font styles
+===============================*/
+@font-face {
+  font-family: PTSerif;
+  src: url(../fonts/PTSerif.ttc);
+}
+
+h1, h2 , h3 , h4 {
+  font-family: PTSerif, Times, serif;
+}
+
+p {
+  font-family: PTSerif, Times, serif;
+  font-weight: 100;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*=============================
+    2. global styles
+===============================*/
+body {
+  background-color: white;
+  font-family: PTSerif, Times, serif;
+}
+
+body > .page-container {
+  padding: 0px 15px 100px 0;
+  min-height: 700px;
+  animation: fadein .5s;
+  -moz-animation: fadein .5s; /* Firefox */
+  -webkit-animation: fadein .5s; /* Safari and Chrome */
+  -o-animation: fadein .5s; /* Opera */
+}
+
+@media only screen and (max-width: 767px) {
+  .page-container {
+    padding: 15px;
+  }
+}
+
+/*=============================
+    3. navbar custom
+===============================*/
+.navbar-default {
+  background-color: white;
+  margin-bottom: 0;
+}
+
+.navbar-default > .container-fluid {
+  padding: 5px 20px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: black;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  opacity: 0.7;
+}
+
+/*=============================
+    4. hero banner
+===============================*/
+.hero-banner {
+  background-size: cover;
+  display: table;
+  width: 100%;
+  height: 500px;
+  padding: 120px 60px;
+}
+
+.hero-banner > div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+}
+
+.hero-banner h1 {
+  font-size: 40px;
+}
+
+.main-banner-bg {
+  background: url(../images/chef-in-home.jpg) center center no-repeat scroll;
+  background-size: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-banner {
+    padding: 0 15px;
+    height: 500px;
+  }
+
+  .hero-banner h1 {
+    font-size: 30px;
+  }
+
+  .main-banner-bg {
+    background-position: center bottom;
+    background-size: auto;
+  }
+}
+
+/*=============================
+    5. section
+===============================*/
+.section {
+  text-align: center;
+  padding: 60px;
+}
+
+/*=============================
+    6. utils
+===============================*/
+.uppercase {
+  text-transform: uppercase;
+}
