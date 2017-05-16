@@ -26,7 +26,7 @@
 <!-- define angular controller -->
 <body ng-controller="mainController">
     <!-- START nav -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -43,8 +43,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/menu">Menu</a></li>
             <li><a href="#">Join as Chef</a></li>
             <li><a href="#">Catering</a></li>
             <li><a href="#">Contact</a></li>
@@ -62,8 +62,27 @@
 
     <!-- START footer -->
     <footer class="text-center">
-      <p>View the tutorial on <a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating">Scotch.io</a></p>
-      <p>View a tutorial on <a href="http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview">Animating Your Angular Single Page App</a></p>
+      <div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu">Menu</a></li>
+          <li><a href="#">Join as Chef</a></li>
+          <li><a href="#">Catering</a></li>
+        </ul>
+        <form class="inline-form">
+          <input type="text" placeholder="Email address">
+          <button type="submit">Subscribe to newsletter</button>
+        </form>
+        <ul>
+          <li><a href="#"><img src="{{imgPath}}/facebook.png"></a></li>
+          <li><a href="#"><img src="{{imgPath}}/instagram.png"></a></li>
+          <li><a href="#"><img src="{{imgPath}}/linkedin.png"></a></li>
+        </ul>
+      </div>
+      <div>
+        <p>© minichef 2017</p>
+        <p>Contact us: hello@minichef.co</p>
+      </div>
     </footer><!-- END footer -->
 </body>
 

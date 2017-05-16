@@ -9,17 +9,10 @@
 			})
 
 			// route for the about page
-			$routeProvider.when('/about', {
-				title: 'about',
-				templateUrl : 'views/about.html',
-				controller  : 'aboutController'
-			})
-
-			// route for the contact page
-			$routeProvider.when('/contact', {
-				title: 'contact',
-				templateUrl : 'views/contact.html',
-				controller  : 'contactController'
+			$routeProvider.when('/menu', {
+				title: 'Menu',
+				templateUrl : 'views/menu.html',
+				controller  : 'menuController'
 			})
 
 			$routeProvider.otherwise({
@@ -40,10 +33,6 @@
 		$scope.imgPath = 'images';
 	});
 
-	mcApp.controller('aboutController', function($scope) {
+	mcApp.controller('menuController', function($scope) {
 		$scope.message = 'Look! I am an about page.';
-	});
-
-	mcApp.controller('contactController', function($scope) {
-		$scope.message = 'Contact us! JK. This is just a demo.';
 	});

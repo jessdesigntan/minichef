@@ -2,24 +2,27 @@
 	<div>
 		<h1>A unique home dining experience</h1>
 		<p class="lead">Dine with your group of friends while being hosted in a professional chef's home</p>
+		<div class="button">
+			<a href="#/menu" class="mc-btn white-btn">Browse Menus</a>
+		</div>
 	</div>
-</div>
+</div><!-- END main-banner-bg -->
 
 <div class="section">
 	<h1>How it works</h1>
 	<div class="row">
 		<div class="col-sm-4">
-			<img src="{{imgPath}}/browse-menus.png">
+			<img src="{{imgPath}}/browse-menus.png" alt="browse menus">
 			<h3>Browse menus</h3>
 			<p>Explore menus crafted by professional chefs</p>
 		</div>
 		<div class="col-sm-4">
-			<img src="{{imgPath}}/book-seats.png">
+			<img src="{{imgPath}}/book-seats.png" alt="book seats">
 			<h3>Reserve your seats</h3>
 			<p>Gather your friends and make a reservation by selecting the available time and date</p>
 		</div>
 		<div class="col-sm-4">
-			<img src="{{imgPath}}/enjoy-meal.png">
+			<img src="{{imgPath}}/enjoy-meal.png" alt="enjoy meal">
 			<h3>Enjoy your meal!</h3>
 			<p>Head down to the chef's home while the chef cook from their home kitchen and host you and your friends</p>
 		</div>
@@ -28,9 +31,78 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h3 class="uppercase">Join our mailing list</h3>
-			<form>
-				<input type="text">
+			<form class="inline-form">
+				<input type="text" placeholder="Email address">
+				<button type="submit">Subscribe</button>
 			</form>
+			<p class="italic">Sign up with our newsletter to stay updated with our latest news and happenings!</p>
 		</div>
 	</div>
-</div>
+</div><!-- END how it works -->
+
+<div class="hero-banner about-us-bg">
+	<div>
+		<div>
+			<h1>About us</h1>
+			<p class="lead">Minichef aims to help fulfill professional chefs’ dream of opening up a restaurant by  providing a marketplace that allows them to cook from their home kitchen and host guest in the comfort of their home, allowing them to express creativity through recipes.  </p>
+		</div>
+		<div>
+			<h2>Why choose minichef?</h2>
+			<div class="row">
+				<div class="col-sm-4">
+					<img src="{{imgPath}}/utensils.png" alt="utensils">
+					<h3>Unique dining experience</h3>
+					<p>Immerse in a homely dining experience as the chef host you at their cosy apartment</p>
+				</div>
+				<div class="col-sm-4">
+					<img src="{{imgPath}}/menu.png" alt="menu">
+					<h3>Crafted menus</h3>
+					<p>The menus are carefully crafted by the chef based on their individual culinary expertise</p>
+				</div>
+				<div class="col-sm-4">
+					<img src="{{imgPath}}/chef-hat.png" alt="chef hat">
+					<h3>Interact with chefs</h3>
+					<p>Get closer to the food by understanding the story behind the dishes and the way it is being made</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- END about-us-bg -->
+
+<div class="section">
+	<h1>Featured Menu</h1>
+	<div class="row" ng-repeat="i in [1, 2]">
+		<div class="col-sm-4" ng-repeat="j in [1, 2, 3]">
+			<div class="menu-card">
+				<a class="menu-hover-card">
+					<div class="menu-chef-details">
+						<div class="date">20 May 2017, 11.30pm Thu</div>
+						<img src="{{imgPath}}/gordon.png">
+						<div class="name">Chef Gordon Ramsay</div>
+						<div class="menu-name">Hearty Italian Cuisine 3 Course Meal</div>
+						<div class="glyphicon glyphicon-search" aria-hidden="true"></div>
+					</div>
+				</a>
+				<img src="{{imgPath}}/food.jpg">
+			</div><!-- END menu-card -->
+		</div>
+	</div>
+</div><!-- END featured menu section -->
+
+<div class="hero-banner unleash-creativity-bg">
+	<div>
+		<h1>Unleash your creativity</h1>
+		<p class="lead">Are you a professional chef with culinary experience? Join minichef by listing your signature dishes on our marketplace</p>
+		<div class="button">
+			<a class="mc-btn white-btn">Join as Chef</a>
+		</div>
+	</div>
+</div><!-- END unleash-creativity-bg -->
+
+<div class="section">
+	<h1>Find Your Favourite Menu</h1>
+	<p class="lead">Taste recipes cooked by professional and trained chefs from their home kitchen</p>
+	<div class="button">
+		<a href="#/menu" class="mc-btn black-btn">Browse Menus</a>
+	</div>
+</div><!-- END featured menu section -->
