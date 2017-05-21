@@ -1,0 +1,37 @@
+<div class="content-container profile-body">
+  <div class="profile-header">
+    <h1>Reservation History</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <ul class="profile-sidebar">
+        <li class="active"><a href="#profile">Profile</a></li>
+        <li><a href="#history">Reservation History</a></li>
+      </ul>
+    </div><!-- END col-sm-3 -->
+    <div class="col-sm-9">
+      <table class="table table-responsive table-hover history-table">
+        <tr>
+          <th>Invoice no</th>
+          <th>Submitted on</th>
+          <th>Menu</th>
+          <th>Time Slot</th>
+          <th>Guest</th>
+          <th>Chef</th>
+          <th>Total Cost</th>
+        </tr>
+
+        <tr ng-repeat="x in [1,2,3,4,5]" ng-click="historyDetails()">
+          <td>M17-111111</td>
+          <td>19/05/2017, 12:30pm</td>
+          <td>Cest La Vie, 3 Course Meal</td>
+          <td>20 May 2017, 11.30pm Thu</td>
+          <td>6</td>
+          <td>Chef Daniel</td>
+          <td>$320.00</td>
+          </a>
+        </tr>
+      </table>
+    </div><!-- END col-sm-9 -->
+  </div><!-- END row -->
+</div><!-- END content-container -->

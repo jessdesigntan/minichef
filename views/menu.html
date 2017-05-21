@@ -6,34 +6,66 @@
 
 <div class="content-container">
 	<div class="row">
-		<div class="col-sm-3">
-			<h4>Filters</h4>
+		<div class="col-md-3 col-sm-6">
+			<form>
+				<label>Availability</label>
+				<select class="form-control">
+					<option>Select time and date</option>
+				</select>
+				<br/>
+
+				<label>Location</label><br/>
+				<input type="text" placeholder="Enter Address" class="form-control">
+				<br/>
+
+				<label>Cuisine</label>
+				<select class="form-control">
+					<option>Select time and date</option>
+				</select>
+				<br/>
+
+				<label>Dietary Restrictions</label>
+				<select class="form-control">
+					<option>Select type of cuisine</option>
+				</select>
+			</form>
 		</div><!-- END filter column -->
 
-		<div class="col-sm-9">
+		<div class="col-md-9">
 			<div class="row">
-				<div class="col-sm-6">
-					<a class="product-card">
-						<div class="image">
-							<img src="{{imgPath}}/product-placeholder.png">
+				<div class="col-md-6 col-sm-12" ng-repeat="i in [1]">
+					<div class="product-card">
+						<div class="image" id="menuCarousel">
+							<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder.png"></a></div>
+							<div><a href="#menu-details" ><img src="{{imgPath}}/kitchen.jpg"></a></div>
 						</div>
 						<div class="date">20 May 2017, 11.30pm Thu</div>
-						<div class="title">Cest La Vie, Mediterranean Cuisine</div>
+						<a href="#menu-details" class="title">Cest La Vie, Mediterranean Cuisine</a>
 						<div class="price">$60.00</div>
 						<div class="location"><span class="glyphicon glyphicon-map-marker"></span>Singapore, Yishun</div>
 
 						<div class="tags">
-							<div>Mediterranean</div>
-							<div>Gluten Free</div>
-							<div>Dairy Free</div>
+							<a>Mediterranean</a>
+							<a>Gluten Free</a>
+							<a>Dairy Free</a>
 						</div>
+						<hr/>
 						<div class="chef">
 							<img src="{{imgPath}}/gordon.png">
 							<p>Chef Gordon</p>
 						</div>
-					</a><!-- END product-card -->
+					</div><!-- END product-card -->
 				</div>
 			</div><!-- END listing row -->
 		</div><!-- END listing column -->
 	</div><!-- END main row -->
 </div><!-- END content-container -->
+
+
+<script>
+	$('#menuCarousel').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+</script>

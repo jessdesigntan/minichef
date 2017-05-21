@@ -10,6 +10,12 @@
   9. mc-btn
   10. footer
   11. product-card
+  12. content-container
+  13. menu details
+  14. profile-header
+  15. profile-sidebar
+  16. profile-table
+  17. order-card
 */
 
 /*=============================
@@ -92,6 +98,11 @@ input {
   box-shadow: none !important;
 }
 
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*=============================
     3. navbar custom
 ===============================*/
@@ -121,6 +132,7 @@ input {
   width: 100%;
   padding: 120px;
   background-size: 100%;
+  background-color: black;
 }
 
 .hero-banner > div {
@@ -169,8 +181,9 @@ input {
   height: 500px;
 }
 
-p.bigger {
-  font-size: 18px;
+.chef-main-banner-bg {
+  background: url(../images/kitchen.jpg) center center no-repeat scroll;
+  height: 700px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -225,12 +238,38 @@ p.bigger {
   margin-top: 20px;
 }
 
+.mBottom0 {
+  margin-bottom: 0;
+}
+
 .mBottom20 {
   margin-bottom: 20px;
 }
 
 .mBottom40 {
   margin-bottom: 40px;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+hr.thick {
+  border-top: 4px solid black;
+}
+
+.text-right {
+  text-align: right;
+}
+
+hr {
+  border-color: #ddd;
+}
+
+@media only screen and (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
 }
 
 /*=============================
@@ -346,30 +385,50 @@ a.menu-hover-card {
 /*=============================
     9. mc-btn
 ===============================*/
+button.mc-btn {
+  text-transform: uppercase;
+  padding: 12px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+button.btn, a.btn {
+  border-radius: 0;
+}
+
+button.btn:hover, a.btn:hover {
+  color: white;
+  opacity: 0.8;
+}
+
 a.mc-btn {
   text-transform: uppercase;
   padding: 12px 40px;
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
+  border: none;
+  display: inline-block;
 }
 
-.white-btn {
+a.white-btn {
   background-color: white;
   color: black;
 }
 
-.white-btn:hover {
-  color: #999;
+a.white-btn:hover {
+  background-color: #eee;
 }
 
-.black-btn {
+a.black-btn {
   background-color: black;
   color: white;
 }
 
-.white-btn:hover {
-  color: #ccc;
+a.black-btn:hover {
+  opacity: 0.9;
 }
 
 /*=============================
@@ -456,13 +515,9 @@ footer ul li:last-child {
   display: block;
   background-color: white;
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 20px;
   color: black;
-  cursor: pointer;
-}
-
-a.product-card {
-  text-decoration: none;
+  margin-bottom: 20px;
 }
 
 .product-card .image img {
@@ -470,8 +525,9 @@ a.product-card {
   margin-bottom: 10px;
 }
 
-.product-card .title {
+.product-card a.title {
   font-size: 20px;
+  color: black;
 }
 
 .product-card .price {
@@ -481,6 +537,7 @@ a.product-card {
 
 .product-card .location {
   font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .product-card .date {
@@ -489,6 +546,25 @@ a.product-card {
   margin-bottom: 10px;
 }
 
+.product-card hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.chef {
+  display: table;
+}
+
+.chef > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.chef > img {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 50px;
+}
 
 /*=============================
     12. content-container
@@ -496,4 +572,206 @@ a.product-card {
 .content-container {
   max-width: 1200px;
   padding: 20px;
+  margin: 0 auto;
+}
+
+/*=============================
+    13. menu-details
+===============================*/
+.menu-details {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.menu-details > .image > img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.menu-details > .content {
+  text-align: center;
+}
+
+.menu-details > .content > div {
+  margin-bottom: 20px;
+}
+
+.menu-details > .content > div::after {
+  content: '';
+  display: block;
+  width: 30px;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.menu-details > .content > div:last-child {
+  margin-bottom: 0;
+}
+
+.menu-details > .content > div:last-child::after {
+  display: none;
+}
+
+.menu-details h4 {
+  font-weight: bold;
+}
+
+/*=============================
+    14. chef-details
+===============================*/
+.chef-details > * {
+  margin-bottom: 20px;
+}
+
+.chef-details img {
+  border-radius: 50%;
+}
+
+.chef-details h4 {
+  font-weight: bold;
+}
+
+/*=============================
+    15. tags
+===============================*/
+
+.tags {
+  margin-bottom: 20px;
+}
+
+.tags > a {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px 15px;
+  border: 1px solid black;
+  color: inherit;
+  cursor: pointer;
+}
+
+.tags > a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  transition: all .3s ease 0s;
+}
+
+.tags > a:last-child {
+  margin-right: 0;
+}
+
+/*=============================
+    14. profile-header
+===============================*/
+.profile-header {
+  padding: 50px 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*=============================
+    15. profile-sidebar
+===============================*/
+ul.profile-sidebar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.profile-sidebar li {
+  margin-bottom: 15px;
+}
+
+ul.profile-sidebar li a {
+  color: inherit;
+  font-size: 16px;
+}
+
+ul.profile-sidebar li.active {
+  font-weight: bold;
+}
+
+ul.profile-sidebar li a:hover {
+  opacity: 0.8;
+}
+
+/*=============================
+    16. profile-table
+===============================*/
+table.profile-table > tbody > form {
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+table.profile-table > tbody > tr > td {
+  border-top: none;
+}
+
+table.profile-table > tbody > tr > td:first-child {
+  font-weight: bolder;
+}
+
+.history-table.table>tbody>tr>td,
+.history-table.table>tfoot>tr>td,
+.history-table.table>tfoot>tr>th,
+.history-table.table>thead>tr>td,
+.history-table.table>thead>tr>th {
+  padding: 20px 8px;
+  cursor: pointer;
+}
+
+/*=============================
+    17. order-card
+===============================*/
+.order-card {
+  border: 1px solid #ddd;
+  padding: 30px;
+}
+
+.order-card > * {
+  margin-bottom: 20px;
+}
+
+.order-card > *:last-child {
+  margin-bottom: 0;
+}
+
+.order-card > h4 {
+  margin-bottom: 30px;
+}
+
+.order-card > .menu {
+  display: block;
+  width: 100%;
+}
+
+.order-card .price {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.order-card > .button {
+  text-align: center;
+  display: block;
+  margin-bottom: 0;
+}
+
+.order-card .table>tbody>tr>td,
+.order-card .table>tbody>tr>th,
+.order-card .table>tfoot>tr>td,
+.order-card .table>tfoot>tr>th,
+.order-card .table>thead>tr>td,
+.order-card .table>thead>tr>th {
+  border-top: none;
+}
+
+.order-card table > tbody > tr > td:first-child {
+  font-weight: bolder;
+}
+
+.menu-title {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  font-weight: bold;
 }
