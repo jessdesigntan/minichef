@@ -1,4 +1,5 @@
 <div class="content-container profile-body">
+  <div ng-include="'views/modals/editProfile.html'"></div>
   <div class="profile-header">
     <h1>My Profile</h1>
   </div>
@@ -11,14 +12,22 @@
     </div><!-- END col-sm-3 -->
       <div class="col-sm-9">
         <div class="row">
-          <form>
-            <div class="col-sm-4">
-              <input type="file">
-            </div><!-- END col-sm-3 -->
+          <div class="col-sm-4">
+            <form>
+              <div class="image-upload">
+                <label for="file-input">
+                  <img src="images/upload-image.svg"/>
+                </label>
+                <input id="file-input" type="file"/>
+              </div>
+            </form>
+          </div>
+
+
             <div class="col-sm-8">
               <table class="profile-table table">
                 <tr>
-                  <td colspan="2"><a class="btn black-btn" style="float:right;">Edit</a></td>
+                  <td colspan="2"><a href="" data-toggle="modal" data-target="#editProfileModal" class="btn black-btn" style="float:right;">Edit</a></td>
                 </tr>
                 <tr>
                   <td>First Name:</td>

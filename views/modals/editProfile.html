@@ -1,0 +1,85 @@
+
+<div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="myModalLabel">Edit Profile</h2>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group error">
+            <label>First Name</label>
+            <span class="error-msg">Required* This fill is empty, please enter your first name</span>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group error">
+            <label>Last Name</label>
+            <span class="error-msg">Required* This fill is empty, please enter your first name</span>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group error">
+            <label>Email Address</label>
+            <span class="error-msg">Required* This fill is empty, please enter your first name</span>
+            <input type="email" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group error">
+            <label>Date of Birth</label>
+            <span class="error-msg">Required* Please enter your date of birth</span>
+            <div class="input-group mBottom20">
+              <span class="input-group-btn">
+                <select class="form-control" name="args">
+                  <option>DD</option>
+                </select>
+              </span>
+              <span class="input-group-btn">
+                <select class="form-control" name="args">
+                  <option>MM</option>
+                </select>
+              </span>
+              <span class="input-group-btn">
+                <select class="form-control" name="args">
+                  <option>YYYY</option>
+                </select>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group error">
+            <label>Gender</label>
+            <span class="error-msg">Required* Please select your gender</span>
+            <br/>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Female
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Male
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>Accepts Marketing?</label><br/>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+            </label>
+          </div>
+
+          <button type="submit" class="btn black-btn btn-block" data-dismiss="modal">Save Changes</a>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

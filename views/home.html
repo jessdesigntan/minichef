@@ -1,5 +1,5 @@
 <div class="hero-banner main-banner-bg">
-	<div>
+	<div class="wow fadeInUp">
 		<h1>A unique home dining experience</h1>
 		<p class="lead">Dine with your group of friends while being hosted in a professional chef's home</p>
 		<div class="button">
@@ -8,7 +8,7 @@
 	</div>
 </div><!-- END main-banner-bg -->
 
-<div class="section">
+<div class="section wow fadeInUp how-it-works">
 	<h1>How it works</h1>
 	<div class="row">
 		<div class="col-sm-4">
@@ -40,14 +40,14 @@
 	</div>
 </div><!-- END how it works -->
 
-<div class="hero-banner about-us-bg">
+<div class="how-it-works hero-banner about-us-bg wow fadeInUp">
 	<div>
 		<div>
 			<h1>About us</h1>
 			<p class="lead">Minichef aims to help fulfill professional chefs’ dream of opening up a restaurant by  providing a marketplace that allows them to cook from their home kitchen and host guest in the comfort of their home, allowing them to express creativity through recipes.  </p>
 		</div>
 		<div>
-			<h2>Why choose minichef?</h2>
+			<h1>Why choose minichef?</h1>
 			<div class="row">
 				<div class="col-sm-4">
 					<img src="{{imgPath}}/utensils.png" alt="utensils">
@@ -69,18 +69,19 @@
 	</div>
 </div><!-- END about-us-bg -->
 
-<div class="section">
+<div class="section wow fadeInUp">
 	<h1>Featured Menu</h1>
 	<div class="row" ng-repeat="i in [1, 2]">
 		<div class="col-sm-4" ng-repeat="j in [1, 2, 3]">
 			<div class="menu-card">
-				<a class="menu-hover-card">
+				<a href="#/menu-details" class="menu-hover-card">
 					<div class="menu-chef-details">
-						<div class="date">20 May 2017, 11.30pm Thu</div>
-						<img src="{{imgPath}}/gordon.png">
-						<div class="name">Chef Gordon Ramsay</div>
-						<div class="menu-name">Hearty Italian Cuisine 3 Course Meal</div>
-						<div class="glyphicon glyphicon-search" aria-hidden="true"></div>
+						<div>
+							<div class="date">20 May 2017, 11.30pm Thu</div>
+							<img src="{{imgPath}}/gordon.png">
+							<div class="name">Chef Gordon Ramsay</div>
+							<div class="menu-name">Hearty Italian Cuisine 3 Course Meal Hearty Italian Cuisine 3 Course Meal</div>
+						</div>
 					</div>
 				</a>
 				<img src="{{imgPath}}/food.jpg">
@@ -89,17 +90,17 @@
 	</div>
 </div><!-- END featured menu section -->
 
-<div class="hero-banner unleash-creativity-bg">
+<div class="hero-banner unleash-creativity-bg wow fadeInUp">
 	<div>
 		<h1>Unleash your creativity</h1>
 		<p class="lead">Are you a professional chef with culinary experience? Join minichef by listing your signature dishes on our marketplace</p>
 		<div class="button">
-			<a class="mc-btn white-btn">Join as Chef</a>
+			<a href="#chef" class="mc-btn white-btn">Join as Chef</a>
 		</div>
 	</div>
 </div><!-- END unleash-creativity-bg -->
 
-<div class="section">
+<div class="section wow fadeInUp">
 	<h1>Find Your Favourite Menu</h1>
 	<p class="lead">Taste recipes cooked by professional and trained chefs from their home kitchen</p>
 	<div class="button">

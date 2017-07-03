@@ -1,13 +1,20 @@
 <div class="hero-banner menu-listing-bg">
-	<div>
+	<div class="wow fadeInUp">
 		<h2>“A recipe has no soul, a chef must bring soul to the recipe”</h2>
 	</div>
 </div><!-- END ingredients-bg -->
 
 <div class="content-container">
 	<div class="row">
-		<div class="col-md-3 col-sm-6">
+		<div class="col-md-3 col-sm-6 hide-mobile">
 			<form>
+				<label>Price Range (SGD)</label><br/>
+				<div class="slider-input">
+					<input type="text" ng-model="search.price_min"/>
+			    <input type="text" ng-model="search.price_max"/>
+				</div>
+		    <slider-range min="10" max="200" value-min="search.price_min" value-max="search.price_max"></slider-range>
+
 				<label>Availability</label>
 				<select class="form-control">
 					<option>Select time and date</option>
@@ -31,13 +38,50 @@
 			</form>
 		</div><!-- END filter column -->
 
+		<div class="col-md-3 col-sm-6 filter-mobile">
+			<a href="" onclick="toggleFilter();">
+				Filter <span class="glyphicon glyphicon-filter" style="float:right;"></span>
+			</a>
+
+			<form>
+				<hr/>
+				<label>Price Range (SGD)</label><br/>
+				<div class="slider-input">
+					<input type="text" ng-model="search.price_min"/>
+					<input type="text" ng-model="search.price_max"/>
+				</div>
+				<slider-range min="10" max="200" value-min="search.price_min" value-max="search.price_max"></slider-range>
+
+				<label>Availability</label>
+				<select class="form-control">
+					<option>Select time and date</option>
+				</select>
+				<br/>
+
+				<label>Location</label><br/>
+				<input type="text" placeholder="Enter Address" class="form-control">
+				<br/>
+
+				<label>Cuisine</label>
+				<select class="form-control">
+					<option>Select time and date</option>
+				</select>
+				<br/>
+
+				<label>Dietary Restrictions</label>
+				<select class="form-control">
+					<option>Select type of cuisine</option>
+				</select>
+			</form>
+		</div><!-- END filter-mobile column -->
+
 		<div class="col-md-9">
-			<div class="row">
-				<div class="col-md-6 col-sm-12" ng-repeat="i in [1]">
-					<div class="product-card">
-						<div class="image" id="menuCarousel">
+			<div class="row-fluid">
+					<div class="product-card full">
+						<div class="full-label">Fully Booked</div>
+						<div class="image menuCarousel">
 							<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder.png"></a></div>
-							<div><a href="#menu-details" ><img src="{{imgPath}}/kitchen.jpg"></a></div>
+							<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder2.jpg"></a></div>
 						</div>
 						<div class="date">20 May 2017, 11.30pm Thu</div>
 						<a href="#menu-details" class="title">Cest La Vie, Mediterranean Cuisine</a>
@@ -45,9 +89,115 @@
 						<div class="location"><span class="glyphicon glyphicon-map-marker"></span>Singapore, Yishun</div>
 
 						<div class="tags">
-							<a>Mediterranean</a>
-							<a>Gluten Free</a>
-							<a>Dairy Free</a>
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Dairy Free</a>
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Dairy Free</a>
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Dairy Free</a>
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Dairy Free</a>
+						</div>
+						<hr/>
+						<div class="chef">
+							<img src="{{imgPath}}/gordon.png">
+							<p>Chef Gordon</p>
+						</div>
+					</div><!-- END product-card -->
+
+					<div class="product-card">
+						<div class="image menuCarousel">
+							<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder2.jpg"></a></div>
+							<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder.png"></a></div>
+						</div>
+						<div class="date">20 May 2017, 11.30pm Thu</div>
+						<a href="#menu-details" class="title">Cest La Vie, Mediterranean Cuisine</a>
+						<div class="price">$60.00</div>
+						<div class="location"><span class="glyphicon glyphicon-map-marker"></span>Singapore, Yishun</div>
+
+						<div class="tags">
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Dairy Free</a>
+						</div>
+						<hr/>
+						<div class="chef">
+							<img src="{{imgPath}}/gordon.png">
+							<p>Chef Gordon</p>
+						</div>
+					</div><!-- END product-card -->
+
+					<div class="product-card">
+						<div class="image menuCarousel">
+							<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder.png"></a></div>
+							<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder2.jpg"></a></div>
+						</div>
+						<div class="date">20 May 2017, 11.30pm Thu</div>
+						<a href="#menu-details" class="title">Cest La Vie, Mediterranean Cuisine</a>
+						<div class="price">$60.00</div>
+						<div class="location"><span class="glyphicon glyphicon-map-marker"></span>Singapore, Yishun</div>
+
+						<div class="tags">
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Dairy Free</a>
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Dairy Free</a>
+							<a href="#menu">Dairy Free</a>
+						</div>
+						<hr/>
+						<div class="chef">
+							<img src="{{imgPath}}/gordon.png">
+							<p>Chef Gordon</p>
+						</div>
+					</div><!-- END product-card -->
+
+					<div class="product-card">
+						<div class="image menuCarousel">
+						<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder2.jpg"></a></div>
+							<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder.png"></a></div>
+						</div>
+						<div class="date">20 May 2017, 11.30pm Thu</div>
+						<a href="#menu-details" class="title">Cest La Vie, Mediterranean Cuisine</a>
+						<div class="price">$60.00</div>
+						<div class="location"><span class="glyphicon glyphicon-map-marker"></span>Singapore, Yishun</div>
+
+						<div class="tags">
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Dairy Free</a>
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Dairy Free</a>
+						</div>
+						<hr/>
+						<div class="chef">
+							<img src="{{imgPath}}/gordon.png">
+							<p>Chef Gordon</p>
+						</div>
+					</div><!-- END product-card -->
+
+					<div class="product-card">
+						<div class="image menuCarousel">
+							<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder.png"></a></div>
+							<div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder2.jpg"></a></div>
+						</div>
+						<div class="date">20 May 2017, 11.30pm Thu</div>
+						<a href="#menu-details" class="title">Cest La Vie, Mediterranean Cuisine</a>
+						<div class="price">$60.00</div>
+						<div class="location"><span class="glyphicon glyphicon-map-marker"></span>Singapore, Yishun</div>
+
+						<div class="tags">
+							<a href="#menu">Mediterranean</a>
+							<a href="#menu">Gluten Free</a>
+							<a href="#menu">Dairy Free</a>
 						</div>
 						<hr/>
 						<div class="chef">
@@ -63,9 +213,14 @@
 
 
 <script>
-	$('#menuCarousel').slick({
+	$('.menuCarousel').slick({
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1
 	});
+
+	$('.filter-mobile>form').hide();
+	function toggleFilter() {
+		$('.filter-mobile>form').slideToggle();
+	}
 </script>

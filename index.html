@@ -12,13 +12,20 @@
   <!-- css -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/rez.css" rel="stylesheet">
 
   <!-- scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="http://code.angularjs.org/1.2.0/angular-route.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/route.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/upload.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/pace.js"></script>
+  <script>new WOW().init();</script>
 
   <!-- slick slider -->
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
@@ -32,6 +39,10 @@
 
 <!-- define angular controller -->
 <body ng-controller="mainController">
+    <div ng-include="'views/modals/login.html'"></div>
+    <div ng-include="'views/modals/signup.html'"></div>
+    <div ng-include="'views/modals/registerOption.html'"></div>
+    <div ng-include="'views/modals/forgotPassword.html'"></div>
     <!-- START nav -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -50,20 +61,29 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#chef">Join as Chef</a></li>
-            <li><a href="#">Catering</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Log in</a></li>
-            <li class="dropdown hide-mobile">
-              <a href="#profile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <li class="profile show-mobile">
+              <a href="#profile" data-toggle="collapse" data-target=".navbar-collapse.in">
+                <img src="{{imgPath}}/gordon.png">
+                <div class="name">Jess Tan</div>
+              </a>
+            </li>
+            <li class="hide-mobile"><a href="#">Home</a></li>
+            <li><a href="#menu" data-toggle="collapse" data-target=".navbar-collapse.in">Menu</a></li>
+            <li><a href="#chef" data-toggle="collapse" data-target=".navbar-collapse.in">Join as Chef</a></li>
+            <li><a href="#catering" data-toggle="collapse" data-target=".navbar-collapse.in">Catering</a></li>
+            <li><a href="" data-toggle="modal" data-target="#loginModal">Log in</a></li>
+            <li><a href="" data-toggle="modal" data-target="#registerOption">Sign up</a></li>
+            <li class="show-mobile"><a href="#history" data-toggle="collapse" data-target=".navbar-collapse.in">Reservation History</a></li>
+            <li class="show-mobile"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in">Log out</a></li>
+            <li class="dropdown hide-mobile profile">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img src="{{imgPath}}/gordon.png">
                 Jess
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="#">My Profile</a></li>
-                <li><a href="#">Reservation History</a></li>
+                <li><a href="#profile">My Profile</a></li>
+                <li><a href="#history">Reservation History</a></li>
                 <li><a href="#">Log out</a></li>
               </ul>
             </li>
@@ -81,10 +101,10 @@
     <footer class="text-center">
       <div>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/menu">Menu</a></li>
-          <li><a href="#">Join as Chef</a></li>
-          <li><a href="#">Catering</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#chef">Join as Chef</a></li>
+          <li><a href="#catering">Catering</a></li>
         </ul>
         <form class="inline-form">
           <input type="text" placeholder="Email address">
@@ -101,6 +121,12 @@
         <p>Contact us: hello@minichef.co</p>
       </div>
     </footer><!-- END footer -->
+    <script>
+    $('.navbar-default .navbar-nav > li > a').on('click', function(){
+        $('.btn-navbar').click(); //bootstrap 2.x
+        $('.navbar-toggle').click() //bootstrap 3.x by Richard
+    });
+    </script>
 </body>
 
 </html>

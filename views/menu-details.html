@@ -2,10 +2,14 @@
   <div class="row">
     <div class="col-sm-6">
       <div class="menu-details">
-        <div class="image">
-          <img src="{{imgPath}}/product-placeholder.png">
+        <div class="image menuCarousel">
+          <div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder.png" width="100%"></a></div>
+          <div><a href="#menu-details" ><img src="{{imgPath}}/product-placeholder2.jpg" width="100%"></a></div>
         </div>
         <div class="content">
+          <div>
+            <h3>3-Course Italian Meal</h3>
+          </div>
           <div>
             <h4>Mezcal daisy</h4>
             <p>Beverage</p>
@@ -29,9 +33,9 @@
         <p>Lorem ipsum dolor sit amet, ea accusata argumentum sit, nec laudem persecuti eu. Intellegam complectitur vis ne, per virtute scriptorem eu. Hinc phaedrum.Lorem ipsum dolor sit amet, ea accusata argumentum sit, nec laudem persecuti eu. Intellegam complectitur vis ne, per virtute scriptorem eu. Hinc.</p>
         <hr/>
         <div class="tags">
-          <a>Mediterranean</a>
-          <a>Mediterranean</a>
-          <a>Mediterranean</a>
+          <a href="#menu">Mediterranean</a>
+          <a href="#menu">Gluten-free</a>
+          <a href="#menu">Dairy free</a>
         </div>
         <hr/>
         <p>Price per guest: $60.00</p>
@@ -46,11 +50,32 @@
           </select>
           <br/>
           <label>No. of guest</label>
-          <input type="number" class="form-control">
+          <div class="input-group" min="1" style="width: 130px;">
+            <span class="input-group-btn" ng-click="minus()">
+              <button class="btn btn-default">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+            </span>
+            <input type="text" class="form-control text-center ng-pristine ng-valid" ng-model="guest" ng-readonly="true" readonly="readonly" min="1">
+            <span class="input-group-btn" ng-click="plus()">
+              <button class="btn btn-default">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+            </span>
+          </div>
           <br/>
-          <button type="submit" class="mc-btn black-btn">Reserve Now</button>
+          <a href="#/checkout" class="mc-btn black-btn mBottom20">Reserve Now</button>
+          <a href=""><p class="small">+ Add allergies notes</p></a>
         </form>
       </div><!-- END chef-details -->
     </div><!-- END of right -->
   </div>
 </div>
+
+<script>
+  $('.menuCarousel').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+</script>

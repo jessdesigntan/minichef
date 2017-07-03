@@ -1,22 +1,21 @@
-<div class="content-container">
+<div class="content-container checkout-content">
   <div class="profile-header">
-    <h1>Reservation History</h1>
+    <h1>Checkout</h1>
   </div>
   <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
-      <div class="order-card">
-        <h4>Order Number: M17 1111 1111</h4>
-        <div class="date">
-          <span class="strong">Submitted on:</span> 22 Feb 2016, 8:55pm
-        </div>
+    <div class="col-sm-6 checkout-reservation">
+      <div>
+        <h4>Your Reservation</h4>
+        <img src="{{imgPath}}/tick.svg">
+      </div>
+      <div class="order-card no-side-border">
         <div class="menu">
           <div class="row">
             <div class="col-sm-4">
               <img src="{{imgPath}}/food.jpg" class="img-responsive">
             </div>
             <div class="col-sm-8">
-              <p class="menu-title lead">Cest La Vie, 3 Course Meal</p>
+              <p class="strong">Cest La Vie, 3 Course Meal</p>
               <table class="table table-condensed mBottom0">
                 <tr>
                   <td>Time slot:</td>
@@ -55,13 +54,15 @@
             </div>
           </div>
         </div>
-
-        <div class="button">
-          <hr/>
-          <a href="#" class="mc-btn black-btn">Download Receipt</a>
-        </div>
       </div><!-- ./ order-card -->
-    </div>
-    <div class="col-sm-3"></div>
-  </div>
-</div>
+    </div><!-- END col-sm-6 -->
+
+    <div class="col-sm-6 checkout-payment">
+      <h4>Payment Details</h4>
+      <p class="mBottom20"><span class="strong">Order Number:</span> M17-111111</p>
+      <p><span class="strong">Payment:</span> <img class="payment-icon-inline" src="{{imgPath}}/visa.svg">Visa ending with 4111</p>
+      <a href="#menu" class="mTop40 mc-btn black-btn btn-block mBottom0">Back to browsing</a>
+    </div><!-- END col-sm-6 -->
+
+  </div><!-- END row -->
+</div><!-- END content-container -->

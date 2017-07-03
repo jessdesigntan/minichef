@@ -1,0 +1,36 @@
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="myModalLabel">Login</h2>
+      </div>
+      <div class="modal-body">
+        <a class="facebook-btn">
+          <img src="images/facebookIcon.svg" width="20"/>
+          <div class="text">Login with Facebook</div>
+        </a>
+        <p class="text-center">OR</p>
+        <form class="error">
+          <span class="error-msg">Looks like either your email address or password were incorrect. Please try again.</span>
+          <label>Email Address</label>
+          <input type="email" class="form-control">
+          <br/>
+          <label>Password</label>
+          <input type="password" class="form-control">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remember me
+            </label>
+          </div>
+          <button ng-click="goToHome()" type="submit" class="btn btn-block black-btn mBottom20" data-dismiss="modal">Log In</button>
+          <a data-toggle="modal" data-dismiss="modal" data-target="#forgotPasswordModal" class="text-center small" style="display:block;cursor:pointer;">Forgot Password?</a>
+          <hr/>
+          <p class="text-center strong">New to minichef?</p>
+          <a class="btn black-btn btn-block" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Sign up</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

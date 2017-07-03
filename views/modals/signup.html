@@ -1,0 +1,94 @@
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="myModalLabel">Sign up with Email</h2>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group error">
+            <label>First Name</label>
+            <span class="error-msg">Required* This fill is empty, please enter your first name</span>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group error">
+            <label>Last Name</label>
+            <span class="error-msg">Required* This fill is empty, please enter your last name</span>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group error">
+            <label>Email Address</label>
+            <span class="error-msg">Required* This fill is empty, please enter your emaill address</span>
+            <input type="email" class="form-control">
+          </div>
+
+          <div class="form-group error">
+            <label>Password</label>
+            <span class="error-msg">Required* This fill is empty, please enter your password</span>
+            <input type="password" class="form-control">
+          </div>
+
+          <div class="form-group error">
+            <label>Confirm Password</label>
+            <span class="error-msg">Required* This fill is empty, please enter to confirm password</span>
+            <input type="password" class="form-control">
+          </div>
+
+          <div class="form-group error">
+            <label>Date of Birth</label>
+            <span class="error-msg">Required* Please enter your date of birth</span>
+            <div class="input-group mBottom20">
+              <span class="input-group-btn">
+                <select class="form-control" name="args">
+                  <option>DD</option>
+                </select>
+              </span>
+              <span class="input-group-btn">
+                <select class="form-control" name="args">
+                  <option>MM</option>
+                </select>
+              </span>
+              <span class="input-group-btn">
+                <select class="form-control" name="args">
+                  <option>YYYY</option>
+                </select>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group error">
+            <label>Gender</label>
+            <span class="error-msg">Required* Please select your gender</span>
+            <br/>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Female
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Male
+            </label>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> I’d like to receive all promotions, surveys, updates and newsletters via email about minichefs and its partners.
+              </label>
+            </div>
+          </div>
+          <button type="submit" ng-click="goToHome()" class="btn black-btn btn-block mBottom20" data-dismiss="modal">Register</button>
+          </form>
+
+          <p class="small text-center">By signing up, I agree to minichef T&C & Privacy policy</p>
+          <hr/>
+          <p class="strong text-center">Have an existing acccount?</p>
+          <a href="" data-toggle="modal" data-target="#loginModal" class="btn black-btn btn-block" data-dismiss="modal">Log in</a>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
